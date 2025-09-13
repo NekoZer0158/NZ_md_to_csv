@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="NZ_md_to_csv"
+config/tags=PackedStringArray("example", "plugins")
+run/main_scene="uid://b3e233ptrt1kt"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="uid://hubpf66jjjbi"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/NZ_md_to_csv/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://NZ_md_to_csv/": "teal",
+"res://addons/": "pink"
+}
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://NZ_md_to_csv/CSV_output/Example_1/Example_1.en.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_1.en.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_1.ru.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_2.en.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_2.ru.translation")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

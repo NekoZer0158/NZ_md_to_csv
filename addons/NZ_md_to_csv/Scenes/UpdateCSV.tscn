@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1gr63dlt0tb7"]
+
+[ext_resource type="Script" uid="uid://c5d83dsi77dry" path="res://addons/NZ_md_to_csv/Scripts/Update_CSV.gd" id="1_ekab8"]
+
+[node name="UpdateCSV" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekab8")
+
+[node name="LabelUpdateCSV_resource" type="Label" parent="."]
+layout_mode = 0
+anchor_right = 0.999132
+anchor_bottom = 0.0493827
+text = "Resource name"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelMainFolder" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0493827
+anchor_right = 1.0
+anchor_bottom = 0.280864
+grow_horizontal = 2
+grow_vertical = 2
+text = "Main folder path"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelOutputFolder" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.280864
+anchor_right = 1.0
+anchor_bottom = 0.512346
+grow_horizontal = 2
+grow_vertical = 2
+text = "Output folder"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelLanguages" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.512346
+anchor_right = 1.0
+anchor_bottom = 0.611111
+grow_horizontal = 2
+grow_vertical = 2
+text = "Languages:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonUpdate" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.680556
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+shortcut_feedback = false
+shortcut_in_tooltip = false
+text = "Update"
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckButtonDebug" type="CheckButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.617284
+anchor_right = 0.0850694
+anchor_bottom = 0.665124
+text = "Debug"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ButtonUpdate" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="CheckButtonDebug" to="." method="_on_check_button_debug_toggled"]

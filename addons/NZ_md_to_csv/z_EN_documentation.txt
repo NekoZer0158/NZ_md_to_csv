@@ -1,0 +1,18 @@
+md:
+	files should contain one line for each language
+	Example for two languages (en and ru):
+		this is an example in English
+		а это пример на русском
+
+How to use:
+	1) Create a resource UpdateCSV_resource.
+	2) Fill main_folder_path, output_folder_path, folders and languages.
+	3) Open UpdateCSV dock.
+	4) Drag and drop your resource in that dock.
+	5) Press "Update" button, after that csv files will appear in the folder, that path you have written 
+	in output_folder_path.
+
+Debug - needed for testing
+
+!IMPORTANT! 
+import of csv files might not happen; if so, just start and close the project (F5,F8)
