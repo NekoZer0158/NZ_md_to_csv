@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpdateCSV_resources" load_steps=5 format=3 uid="uid://brxtwdpwfwa6d"]
+
+[ext_resource type="Script" uid="uid://ju703jljlwak" path="res://addons/NZ_md_to_csv/Scripts/UpdateCSV_resource.gd" id="1_an5p7"]
+[ext_resource type="Resource" uid="uid://43nadi721s" path="res://NZ_md_to_csv/Resources/example_1.tres" id="2_3kab3"]
+[ext_resource type="Script" uid="uid://cfmvg5j71gxwn" path="res://addons/NZ_md_to_csv/Scripts/UpdateCSV_resources.gd" id="2_ppd1x"]
+[ext_resource type="Resource" uid="uid://bi7ka7ymsxmbs" path="res://NZ_md_to_csv/Resources/example_2.tres" id="3_w7uin"]
+
+[resource]
+script = ExtResource("2_ppd1x")
+resources = Array[ExtResource("1_an5p7")]([ExtResource("2_3kab3"), ExtResource("3_w7uin")])
+metadata/_custom_type_script = "uid://cfmvg5j71gxwn"

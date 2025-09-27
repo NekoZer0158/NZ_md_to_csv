@@ -11,6 +11,9 @@ How to use:
 	4) Drag and drop your resource in that dock.
 	5) Press the "Update" button; after that, csv files will appear in the folder with the path you have written in output_folder_path.
 
+If you want to put mulitple UpdateCSV_resource in one time, you shoude put all of them in
+UpdateCSV_resources and drag and drop it in UpdateCSV.
+
 Debug - needed for testing
 
 !IMPORTANT! 
