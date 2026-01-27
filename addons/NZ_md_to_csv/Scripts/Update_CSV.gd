@@ -3,9 +3,10 @@
 extends Control
 
 @onready var label_update_csv_resource: Label = $LabelUpdateCSV_resource
-@onready var label_main_folder: Label = $LabelMainFolder
-@onready var label_output_folder: Label = $LabelOutputFolder
-@onready var label_languages: Label = $LabelLanguages
+@onready var label_main_folder: RichTextLabel = $RichTextLabelMainFolder
+@onready var label_output_folder: RichTextLabel = $RichTextLabelOutputFolder
+@onready var label_languages: RichTextLabel = $RichTextLabelLanguages
+@onready var button_update: Button = $ButtonUpdate
 
 var debug : bool = false
 var updateCSV_r : UpdateCSV_base_resource
@@ -76,19 +77,27 @@ func check_update_CSV_resource(resource:UpdateCSV_resource) -> bool:
 func _load_resource(resource_path:String) -> void:
 	var resource_instance := load(resource_path)
 	if resource_instance is UpdateCSV_resource or resource_instance is UpdateCSV_resources:
+		button_update.disabled = false
 		updateCSV_r = resource_instance
 		label_update_csv_resource.text = _get_resource_name(updateCSV_r)
 		if resource_instance is UpdateCSV_resource:
-			label_main_folder.text = "Main folder\n"+updateCSV_r.main_folder_path
-			label_output_folder.text = "Output folder\n"+updateCSV_r.output_folder_path
+			label_main_folder.text = "[b]Main folder[/b]\n"+updateCSV_r.main_folder_path
+			label_output_folder.text = "[b]Output folder[/b]\n"+updateCSV_r.output_folder_path
 			var all_languages : String
 			for i in updateCSV_r.languages:
 				all_languages += i+" "
-			label_languages.text = "Languages\n"+all_languages
-		else:
-			label_main_folder.text = "Main folder\nThere are multiple files"
-			label_output_folder.text = "Output folder\nThere are multiple files"
-			label_languages.text = "..."
+			label_languages.text = "[b]Languages[/b]\n"+all_languages
+		elif resource_instance is UpdateCSV_resources:
+			label_main_folder.text = "[b]Main folder[/b]\n"
+			label_output_folder.text = "[b]Output folder[/b]\n"
+			label_languages.text = "[b]Languages[/b]\n"
+			for i in range(0,updateCSV_r.resources.size()):
+				label_main_folder.text += str(i)+") "+updateCSV_r.resources[i].main_folder_path+"\n"
+				label_output_folder.text += str(i)+") "+updateCSV_r.resources[i].output_folder_path+"\n"
+				label_languages.text += str(i)+") "
+				for j in updateCSV_r.resources[i].languages:
+					label_languages.text += j+" "
+				label_languages.text += "\n"
 	else:
 		push_error("Wrong type of resource")
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpttj3leq57bo"
-path="res://.godot/imported/MD_to_CSV_base_resources.svg-bb7cb13145f8356e52158c4b0bd4b03e.ctex"
+uid="uid://cl6w1xykavysj"
+path="res://.godot/imported/MD_to_CSV_resources.svg-4b273f28b6cff90890c3fab03a76a97d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/NZ_md_to_csv/Icons/MD_to_CSV_base_resources.svg"
-dest_files=["res://.godot/imported/MD_to_CSV_base_resources.svg-bb7cb13145f8356e52158c4b0bd4b03e.ctex"]
+source_file="res://addons/NZ_md_to_csv/Icons/MD_to_CSV_resources.svg"
+dest_files=["res://.godot/imported/MD_to_CSV_resources.svg-4b273f28b6cff90890c3fab03a76a97d.ctex"]
 
 [params]
 
