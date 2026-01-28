@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c5d83dsi77dry" path="res://addons/NZ_md_to_csv/Scripts/Update_CSV.gd" id="1_ekab8"]
 
 [node name="UpdateCSV" type="Control"]
+custom_minimum_size = Vector2(300, 285)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,8 +11,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ekab8")
+metadata/_edit_lock_ = true
 
 [node name="LabelUpdateCSV_resource" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 32)
 layout_mode = 0
 anchor_right = 0.999132
 anchor_bottom = 0.0493827
@@ -66,7 +69,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.53240776
 anchor_right = 1.0
-anchor_bottom = 0.6851852
+anchor_bottom = 0.69290125
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
@@ -83,7 +86,7 @@ metadata/_edit_use_anchors_ = true
 [node name="ButtonUpdate" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.8009259
+anchor_top = 0.80864197
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -95,14 +98,25 @@ shortcut_in_tooltip = false
 text = "Update"
 metadata/_edit_use_anchors_ = true
 
-[node name="CheckButtonDebug" type="CheckButton" parent="."]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.71296316
-anchor_right = 0.08506945
-anchor_bottom = 0.7608029
-text = "Debug"
+anchor_top = 0.7083333
+anchor_right = 1.0
+anchor_bottom = 0.7824074
+vertical_scroll_mode = 0
 metadata/_edit_use_anchors_ = true
 
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckButtonDebug" type="CheckButton" parent="ScrollContainer/HBoxContainer"]
+layout_mode = 2
+text = "Debug"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
 [connection signal="pressed" from="ButtonUpdate" to="." method="_on_button_pressed"]
-[connection signal="toggled" from="CheckButtonDebug" to="." method="_on_check_button_debug_toggled"]
+[connection signal="toggled" from="ScrollContainer/HBoxContainer/CheckButtonDebug" to="." method="_on_check_button_debug_toggled"]

@@ -8,5 +8,4 @@ main_folder_path = "res://NZ_md_to_csv/MD_input/"
 output_folder_path = "res://NZ_md_to_csv/CSV_output/Example_1/"
 folders = Array[String](["Example_1"])
 languages = Array[String](["en"])
-separator = "_"
 metadata/_custom_type_script = "uid://ju703jljlwak"

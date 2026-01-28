@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NZ_md_to_csv"
-config/version="1.2"
+config/version="1.3"
 config/tags=PackedStringArray("example", "plugins")
 run/main_scene="uid://b3e233ptrt1kt"
 config/features=PackedStringArray("4.5", "GL Compatibility")
@@ -30,7 +30,7 @@ folder_colors={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://NZ_md_to_csv/CSV_output/Example_1/Example_1.en.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_1.en.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_1.ru.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_2.en.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_2.ru.translation")
+locale/translations=PackedStringArray("res://NZ_md_to_csv/CSV_output/Example_1/Example_1.en.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_1.en.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_1.ru.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_2.en.translation", "res://NZ_md_to_csv/CSV_output/Example_2/Example_2_2.ru.translation", "res://NZ_md_to_csv/CSV_output/Example_3/Example_1.en.translation", "res://NZ_md_to_csv/CSV_output/Example_3/Example_2_1.en.translation", "res://NZ_md_to_csv/CSV_output/Example_3/Example_2_2.en.translation", "res://NZ_md_to_csv/CSV_output/Example_3/Example_2_2.ru.translation", "res://NZ_md_to_csv/CSV_output/Example_3/Example_2_1.ru.translation", "res://NZ_md_to_csv/CSV_output/Example_3/Example_1.ru.translation")
 
 [rendering]
 

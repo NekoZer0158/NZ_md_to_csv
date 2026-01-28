@@ -2,8 +2,10 @@
 class_name UpdateCSV_resource
 extends UpdateCSV_base_resource
 
-@export var main_folder_path : String ## This is a path to a folder with md files
-@export var output_folder_path : String ## This is a path to a folder, in which will be created csv files
-@export var folders : Array[String] ## names of a folders to scan
+@export var main_folder_path : String ## This is a path to a folder with .md files
+@export var output_folder_path : String ## This is a path to a folder, in which will be created .csv files
+@export var folders : Array[String] ## names of folders to scan
 @export var languages : Array[String] ## en, ru, fr, de, etc...
-@export var separator : String = "_" ## This will be between folder name, global line number and a file name
+@export var separator : String = "_" ## This will be between folder name, line number and a file name
+@export var include_folder_name : bool = true
+@export var include_line_number : bool = false

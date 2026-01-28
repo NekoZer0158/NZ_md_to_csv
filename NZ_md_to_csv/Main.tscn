@@ -9,6 +9,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Default" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "
+Default"
 
 [node name="Label_example_1" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -16,12 +22,54 @@ text = "Example_1_0_file_1"
 
 [node name="Label_example_2_1_1" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Example_2_1-0-file_2_1"
+text = "Example_2_1_0_file_2_1"
 
 [node name="Label_example_2_1_2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Example_2_1-0-file_2_2"
+text = "Example_2_1_1_file_2_2"
 
 [node name="Label_example_2_2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Example_2_2-0-file_2_1"
+text = "Example_2_2_0_file_2_1"
+
+[node name="No_line_number" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "
+No line number"
+
+[node name="Label_example_1_no_line_number" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Example_1_file_1"
+
+[node name="Label_example_2_1_1_no_line_number" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Example_2_1-file_2_1"
+
+[node name="Label_example_2_1_2_no_line_number" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Example_2_1-file_2_2"
+
+[node name="Label_example_2_2_no_line_number" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Example_2_2-file_2_1"
+
+[node name="No_folder" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "
+No folder name"
+
+[node name="Label_example_1_no_folder" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "0_file_1"
+
+[node name="Label_example_2_1_1_no_folder" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "0-file_2_1"
+
+[node name="Label_example_2_1_2_no_folder" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "1-file_2_2"
+
+[node name="Label_example_2_2_no_folder" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "0-file_2_1"

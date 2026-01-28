@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ceu5vmqo3vv7i"
+
+[deps]
+
+files=["res://NZ_md_to_csv/CSV_output/Example_3/Example_1.en.translation", "res://NZ_md_to_csv/CSV_output/Example_3/Example_1.ru.translation"]
+
+source_file="res://NZ_md_to_csv/CSV_output/Example_3/Example_1.csv"
+dest_files=["res://NZ_md_to_csv/CSV_output/Example_3/Example_1.en.translation", "res://NZ_md_to_csv/CSV_output/Example_3/Example_1.ru.translation"]
+
+[params]
+
+compress=true
+delimiter=0

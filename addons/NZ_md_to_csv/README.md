@@ -5,6 +5,11 @@ Check GitHub, if you want to see different ways of how you can use this plugin.
 
 ## Changelog
 
+### 1.3
+	Fix line number in the output .csv files, now it will not be always 0
+	Fix bug that stored all lines from file even if there was less languages than lines
+	Line number now can be disabled
+	Now you can remove folder name from the output
 ### 1.2
 	Some labels were changed to RichTextLabel
 	Improve visuals in UpdateCSV dock

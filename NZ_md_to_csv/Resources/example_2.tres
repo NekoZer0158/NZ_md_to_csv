@@ -9,4 +9,6 @@ output_folder_path = "res://NZ_md_to_csv/CSV_output/Example_2/"
 folders = Array[String](["Example_2_1", "Example_2_2"])
 languages = Array[String](["en", "ru"])
 separator = "-"
+include_folder_name = false
+include_line_number = true
 metadata/_custom_type_script = "uid://ju703jljlwak"
