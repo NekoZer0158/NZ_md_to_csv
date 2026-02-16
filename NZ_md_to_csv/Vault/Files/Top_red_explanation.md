@@ -1,0 +1,1 @@
+For now, colors aren't used, but I will think about how I can implement them to be used in Godot

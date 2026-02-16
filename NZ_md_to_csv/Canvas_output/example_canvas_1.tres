@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Resource_imported_canvas" load_steps=2 format=3 uid="uid://b07spom3cjbur"]
+
+[ext_resource type="Script" uid="uid://c8exmej4jju2r" path="res://addons/NZ_md_to_csv/Scripts/Resource_imported_canvas.gd" id="1_f3jjq"]
+
+[resource]
+script = ExtResource("1_f3jjq")
+dialogue_tree = Dictionary[String, Dictionary]({
+"Base": {
+"Files_Bottom_nothing": ["Files_Top_green"],
+"Files_Bottom_path": ["Files_Bottom_nothing"],
+"Files_Start": ["Files_Bottom_path", "Files_Top_path", "Files_Also_works"],
+"Files_Top_blue": ["Files_Top_blue_green_reset"],
+"Files_Top_blue_green_reset": ["Files_Start"],
+"Files_Top_green": ["Files_Top_blue_green_reset"],
+"Files_Top_path": ["Files_Top_question"],
+"Files_Top_question": ["Files_Top_red", "Files_Top_blue", "Files_Top_green"],
+"Files_Top_red": ["Files_Top_red_explanation"]
+}
+})

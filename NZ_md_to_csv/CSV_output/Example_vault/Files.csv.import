@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://d4loy1y1vmlb1"
+
+[deps]
+
+files=["res://NZ_md_to_csv/CSV_output/Example_vault/Files.en.translation"]
+
+source_file="res://NZ_md_to_csv/CSV_output/Example_vault/Files.csv"
+dest_files=["res://NZ_md_to_csv/CSV_output/Example_vault/Files.en.translation"]
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UpdateCSV_info" load_steps=2 format=3 uid="uid://vnfwegiioeoc"]
+
+[ext_resource type="Script" uid="uid://du40nd34r60k6" path="res://addons/NZ_md_to_csv/Scripts/UpdateCSV_info.gd" id="1_fvc8w"]
+
+[resource]
+resource_name = "example_1"
+script = ExtResource("1_fvc8w")
+og_file_paths = {
+"Example_1_file_1": "MD_input/Example_1/file_1.md"
+}

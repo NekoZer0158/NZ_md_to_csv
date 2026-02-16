@@ -1,0 +1,12 @@
+keys,en
+Files_Also_works,"Yep, that also works"
+Files_Bottom_nothing,"Nothing is here, except green color"
+Files_Bottom_path,Let's move that way
+Files_Start,First
+Files_Top_blue,Blue
+Files_Top_blue_green_reset,Let's get back to the beginning
+Files_Top_green,Green
+Files_Top_path,I think this path is better
+Files_Top_question,What's your favorite color?
+Files_Top_red,Red
+Files_Top_red_explanation,"For now, colors aren't used, but I will think about how I can implement them to be used in Godot"

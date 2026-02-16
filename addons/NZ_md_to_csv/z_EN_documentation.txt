@@ -1,3 +1,5 @@
+WIP. I will improve documentation when all imported stuff will be added (it will happen this year - in 2026)
+
 md:
 	files should contain one line for each language
 	Example for two languages (en and ru):
@@ -17,4 +19,4 @@ UpdateCSV_resources and drag and drop it in UpdateCSV.
 Debug - needed for testing
 
 !IMPORTANT! 
-Import of csv files might not happen; if so, just start and close the project (F5,F8)
+Import of csv files might not happen; if so, just start and close the project (F5,F8) or just click outside Godot window and then click anywhere in Godot window again.

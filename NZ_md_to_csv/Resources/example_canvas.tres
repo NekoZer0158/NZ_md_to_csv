@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UpdateCSV_resource_canvas" load_steps=2 format=3 uid="uid://rybdqgrqmope"]
+
+[ext_resource type="Script" uid="uid://r4u85upq12mj" path="res://addons/NZ_md_to_csv/Scripts/UpdateCSV_resource_canvas.gd" id="1_vs7ji"]
+
+[resource]
+script = ExtResource("1_vs7ji")
+main_folder_path = "res://NZ_md_to_csv/Vault/"
+output_file_name = "example_canvas_1"
+output_folder_path = "res://NZ_md_to_csv/Canvas_output/"
+canvas_names = Array[String](["Base"])
+info_file_path = "res://NZ_md_to_csv/Info_output/example_vault.tres"
+metadata/_custom_type_script = "uid://r4u85upq12mj"

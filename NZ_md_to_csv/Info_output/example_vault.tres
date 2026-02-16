@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="UpdateCSV_info" load_steps=2 format=3 uid="uid://5bdudabvgoyi"]
+
+[ext_resource type="Script" uid="uid://du40nd34r60k6" path="res://addons/NZ_md_to_csv/Scripts/UpdateCSV_info.gd" id="1_admce"]
+
+[resource]
+resource_name = "example_vault"
+script = ExtResource("1_admce")
+og_file_paths = {
+"Files_Also_works": "Vault/Files/Also_works.md",
+"Files_Bottom_nothing": "Vault/Files/Bottom_nothing.md",
+"Files_Bottom_path": "Vault/Files/Bottom_path.md",
+"Files_Start": "Vault/Files/Start.md",
+"Files_Top_blue": "Vault/Files/Top_blue.md",
+"Files_Top_blue_green_reset": "Vault/Files/Top_blue_green_reset.md",
+"Files_Top_green": "Vault/Files/Top_green.md",
+"Files_Top_path": "Vault/Files/Top_path.md",
+"Files_Top_question": "Vault/Files/Top_question.md",
+"Files_Top_red": "Vault/Files/Top_red.md",
+"Files_Top_red_explanation": "Vault/Files/Top_red_explanation.md"
+}

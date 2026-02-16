@@ -28,7 +28,7 @@ layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.06944444
 anchor_right = 1.0
-anchor_bottom = 0.30092594
+anchor_bottom = 0.25308645
 offset_bottom = -1.5258789e-05
 grow_horizontal = 2
 grow_vertical = 2
@@ -47,9 +47,9 @@ metadata/_edit_use_anchors_ = true
 [node name="RichTextLabelOutputFolder" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.30092573
+anchor_top = 0.25308642
 anchor_right = 1.0
-anchor_bottom = 0.53240776
+anchor_bottom = 0.4537037
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
@@ -67,9 +67,9 @@ metadata/_edit_use_anchors_ = true
 [node name="RichTextLabelLanguages" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.53240776
+anchor_top = 0.4537037
 anchor_right = 1.0
-anchor_bottom = 0.69290125
+anchor_bottom = 0.58487654
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
@@ -83,10 +83,29 @@ meta_underlined = false
 hint_underlined = false
 metadata/_edit_use_anchors_ = true
 
+[node name="RichTextLabelInfoPath" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.58487654
+anchor_right = 1.0
+anchor_bottom = 0.7175926
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_filter = 1
+bbcode_enabled = true
+text = "[b]Info path[/b]
+There is no info path"
+horizontal_alignment = 1
+vertical_alignment = 1
+meta_underlined = false
+hint_underlined = false
+metadata/_edit_use_anchors_ = true
+
 [node name="ButtonUpdate" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.80864197
+anchor_top = 0.845679
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -101,9 +120,9 @@ metadata/_edit_use_anchors_ = true
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.7083333
+anchor_top = 0.7361111
 anchor_right = 1.0
-anchor_bottom = 0.7824074
+anchor_bottom = 0.8101852
 vertical_scroll_mode = 0
 metadata/_edit_use_anchors_ = true
 

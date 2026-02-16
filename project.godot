@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="NZ_md_to_csv"
-config/version="1.3"
+config/version="1.4"
 config/tags=PackedStringArray("example", "plugins")
 run/main_scene="uid://b3e233ptrt1kt"
 config/features=PackedStringArray("4.5", "GL Compatibility")

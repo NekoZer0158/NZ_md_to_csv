@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpdateCSV_resource" load_steps=2 format=3 uid="uid://cmh3jlrpyaoa"]
+
+[ext_resource type="Script" uid="uid://ju703jljlwak" path="res://addons/NZ_md_to_csv/Scripts/UpdateCSV_resource.gd" id="1_oxoqp"]
+
+[resource]
+resource_name = "example_1"
+script = ExtResource("1_oxoqp")
+main_folder_path = "res://NZ_md_to_csv/Vault/"
+output_folder_path = "res://NZ_md_to_csv/CSV_output/Example_vault/"
+folders = Array[String](["Files"])
+languages = Array[String](["en"])
+info_file_name = "example_vault"
+info_file_path = "res://NZ_md_to_csv/Info_output/"
+info_rfolder_stop_name = "Vault"
+metadata/_custom_type_script = "uid://ju703jljlwak"

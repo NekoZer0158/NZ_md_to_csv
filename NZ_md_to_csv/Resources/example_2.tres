@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://ju703jljlwak" path="res://addons/NZ_md_to_csv/Scripts/UpdateCSV_resource.gd" id="1_5xy6v"]
 
 [resource]
+resource_name = "example_2"
 script = ExtResource("1_5xy6v")
 main_folder_path = "res://NZ_md_to_csv/MD_input/"
 output_folder_path = "res://NZ_md_to_csv/CSV_output/Example_2/"
 folders = Array[String](["Example_2_1", "Example_2_2"])
 languages = Array[String](["en", "ru"])
 separator = "-"
+excluded_file_names = Array[String](["file_2_3"])
 include_folder_name = false
 include_line_number = true
 metadata/_custom_type_script = "uid://ju703jljlwak"
