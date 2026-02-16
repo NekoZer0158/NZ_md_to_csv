@@ -1,6 +1,6 @@
 # NZ md to csv
 Plugin to convert md files to csv files and use them as translations. When you use, for example, Obsidian with md files to have a better workplace for dialogues with different paths for RPGs, you don't need to manually copy-paste everything from it to your Godot project; you can just use this plugin and, in one press of a button, convert all needed md files into csv files. <br>
-Also you can conver canvases from Obsidian into a resource with a dictionary, that includes every connection between files (can be used an easier implementation of dialogue tree).
+Also, you can convert canvases from Obsidian into a resource with a dictionary that includes every connection between files (can be used as an easier implementation of a dialogue tree).
 Should work with any file paths.
 
 ## Changelog
@@ -8,6 +8,7 @@ Should work with any file paths.
 ### 1.4
 	Add UpdateCSV_resource_canvas - use it to import canvases from Obsidian into Resource_imported_canvas (see example_vault for how it works)
 	Add UpdateCSV_info - needed for importing some additional things from the files, that can be used later (ex. for UpdarteCSV_resource_canvas)
+	Now you can exclude unnecessary files, just put their names in excluded_file_names in UpdateCSV_resource
 	Small change in the documentation
 ### 1.3
 	Fix line number in the output .csv files, now it will not be always 0
