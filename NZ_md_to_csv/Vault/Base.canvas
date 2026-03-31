@@ -9,9 +9,10 @@
 		{"id":"6e61f04ea6f26d98","type":"file","file":"Files/Top_red_explanation.md","x":720,"y":-400,"width":340,"height":139},
 		{"id":"fd09f5432894f0fe","type":"file","file":"Files/Top_blue_green_reset.md","x":740,"y":-100,"width":340,"height":125},
 		{"id":"376b4dd6ee7f4ccf","type":"file","file":"Files/Start.md","x":1120,"y":-100,"width":220,"height":125},
-		{"id":"cb5fa3b4c321d140","x":1380,"y":-100,"width":280,"height":125,"type":"file","file":"Files/Also_works.md"},
+		{"id":"cb5fa3b4c321d140","type":"file","file":"Files/Also_works.md","x":1380,"y":-100,"width":280,"height":125},
 		{"id":"ac9bbc49c0081d63","type":"file","file":"Files/Top_question.md","x":60,"y":-191,"width":260,"height":125},
-		{"id":"978ef3a97506e9f3","type":"file","file":"Files/Bottom_nothing.md","x":60,"y":60,"width":260,"height":120}
+		{"id":"978ef3a97506e9f3","type":"file","file":"Files/Bottom_nothing.md","x":60,"y":60,"width":260,"height":120},
+		{"id":"5188049199537c9e","x":-240,"y":-700,"width":340,"height":160,"color":"1","type":"file","file":"Files/Independent_red.md"}
 	],
 	"edges":[
 		{"id":"b4a83731d7967f39","fromNode":"c6b1af8effe83d62","fromSide":"right","toNode":"de55722c2cf25317","toSide":"left"},

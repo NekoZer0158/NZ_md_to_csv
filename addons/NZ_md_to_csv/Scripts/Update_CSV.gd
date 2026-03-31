@@ -18,6 +18,7 @@ func _update_csv(resource:UpdateCSV_resource) -> void:
 	var local_main_folder_path : String
 	var can_create_info_file : bool = !resource.info_file_name.is_empty() and !resource.info_file_path.is_empty()
 	var info_file := UpdateCSV_info.new()
+	var all_imported_file_paths : PackedStringArray
 	local_main_folder_path = resource.main_folder_path.replace("\\","/")
 	if debug:
 		print("can_create_info_file: ",can_create_info_file)
@@ -32,7 +33,9 @@ func _update_csv(resource:UpdateCSV_resource) -> void:
 			cur_files_path = local_main_folder_path+folder_name
 		var file_paths := get_files_from_dir(cur_files_path)
 		var line_number : int = 0
-		var cur_translation_fiile := FileAccess.open(resource.output_folder_path+folder_name+".csv",FileAccess.WRITE)
+		var translation_file_path = resource.output_folder_path+folder_name+".csv"
+		all_imported_file_paths.append(translation_file_path)
+		var cur_translation_fiile := FileAccess.open(translation_file_path,FileAccess.WRITE)
 		var local_languages := resource.languages.duplicate(true)
 		var local_languages_size := local_languages.size()
 		local_languages.push_front("keys")
@@ -63,6 +66,7 @@ func _update_csv(resource:UpdateCSV_resource) -> void:
 					added_lines += 1
 				if debug:
 					print("cur_file_path: ",cur_file_path," | translations_for_one_line:",translations_for_one_line)
+				_other_changes_for_one_line(resource,translations_for_one_line)
 				cur_translation_fiile.store_csv_line(translations_for_one_line)
 			else:
 				push_error("Can't open file")
@@ -70,11 +74,40 @@ func _update_csv(resource:UpdateCSV_resource) -> void:
 				line_number += 1
 			if can_create_info_file:
 				info_file.og_file_paths[translations_for_one_line[0]] = resource.info_rfolder_stop_name+cur_file_path.reverse().get_slice(resource.info_rfolder_stop_name.reverse(),0).reverse()
+		cur_translation_fiile.close()
 	if debug:
 		print("info_file.og_file_paths: ",info_file.og_file_paths)
 	if can_create_info_file:
 		info_file.resource_name = resource.info_file_name
 		_fill_info_file_and_save(info_file,resource)
+	_reimport_files(all_imported_file_paths,true)
+
+func _other_changes_for_one_line(resource:UpdateCSV_resource,cur_translations:PackedStringArray) -> void:
+	if resource.remove_links:
+		for i in range(1,cur_translations.size()):
+			var one_translation = cur_translations[i]
+			if debug:
+				print("one_translation: ",one_translation)
+			var remove_vertical_bar : bool = false
+			var before_vertical_bar : bool = false
+			for j in range(0,one_translation.length()):
+				match one_translation[j]:
+					"[":
+						remove_vertical_bar = true
+						before_vertical_bar = true
+						one_translation[j] = resource.character_to_remove
+					"]":
+						remove_vertical_bar = false
+						one_translation[j] = resource.character_to_remove
+					"|":
+						before_vertical_bar = false
+						if remove_vertical_bar:
+							one_translation[j] = resource.character_to_remove
+					_:
+						if before_vertical_bar:
+							one_translation[j] = resource.character_to_remove
+			var character_to_remove_code : int = ord(resource.character_to_remove)
+			cur_translations[i] = one_translation.remove_char(character_to_remove_code)
 
 func _fill_info_file_and_save(info_file:UpdateCSV_info,updateCSV_resource:UpdateCSV_resource) -> void:
 	var resource_path : String = updateCSV_resource.info_file_path+"/"+info_file.resource_name+".tres"
@@ -87,6 +120,7 @@ func _fill_info_file_and_save(info_file:UpdateCSV_info,updateCSV_resource:Update
 		push_error("Something is wrong when saving info_file")
 	elif debug:
 		print("info file is successfully created")
+	_reimport_files([resource_path])
 
 func _turn_canvas_into_resource(resource:UpdateCSV_resource_canvas) -> void:
 	var local_main_folder_path : String
@@ -143,6 +177,7 @@ func _turn_canvas_into_resource(resource:UpdateCSV_resource_canvas) -> void:
 		new_resource_imported_canvas = old_resource
 		new_resource_imported_canvas.take_over_path(imported_canvas_path)
 	ResourceSaver.save(new_resource_imported_canvas,imported_canvas_path)
+	_reimport_files([imported_canvas_path])
 
 func get_files_from_dir(dir_path:String) -> PackedStringArray:
 	var file_paths := DirAccess.get_files_at(dir_path)
@@ -167,6 +202,14 @@ func _on_button_pressed() -> void:
 		if !_check_update_CSV_resource_canvas(updateCSV_r):
 			return
 		_turn_canvas_into_resource(updateCSV_r)
+
+func _reimport_files(file_paths:PackedStringArray,update_file:bool=false) -> void:
+	var cur_filesystem := EditorInterface.get_resource_filesystem()
+	if !update_file:
+		for i in file_paths:
+			cur_filesystem.update_file(i)
+	else:
+		cur_filesystem.reimport_files(file_paths)
 
 func _check_update_CSV_resource_canvas(resource:UpdateCSV_resource_canvas) -> bool:
 	if resource.main_folder_path.is_empty():

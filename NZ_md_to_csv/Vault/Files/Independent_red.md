@@ -1,0 +1,1 @@
+Yeah, now you can remove links

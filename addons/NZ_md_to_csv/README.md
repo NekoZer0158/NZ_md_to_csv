@@ -5,6 +5,14 @@ Check GitHub, if you want to see different ways of how you can use this plugin.
 
 ## Changelog
 
+### 1.5
+	You can now remove vault links from exported files.
+	Add proper reimport, now you don't need to click outisde Godot to reimport files.
+### 1.4
+	Add UpdateCSV_resource_canvas - use it to import canvases from Obsidian into Resource_imported_canvas (see example_vault for how it works)
+	Add UpdateCSV_info - needed for importing some additional things from the files, that can be used later (ex. for UpdarteCSV_resource_canvas)
+	Now you can exclude unnecessary files, just put their names in excluded_file_names in UpdateCSV_resource
+	Small change in the documentation
 ### 1.3
 	Fix line number in the output .csv files, now it will not be always 0
 	Fix bug that stored all lines from file even if there was less languages than lines

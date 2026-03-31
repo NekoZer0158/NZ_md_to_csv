@@ -5,6 +5,9 @@ Should work with any file paths.
 
 ## Changelog
 
+### 1.5
+	You can now remove vault links from exported files.
+	Add proper reimport, now you don't need to click outisde Godot to reimport files.
 ### 1.4
 	Add UpdateCSV_resource_canvas - use it to import canvases from Obsidian into Resource_imported_canvas (see example_vault for how it works)
 	Add UpdateCSV_info - needed for importing some additional things from the files, that can be used later (ex. for UpdarteCSV_resource_canvas)

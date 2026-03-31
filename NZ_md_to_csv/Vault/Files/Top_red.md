@@ -1,1 +1,1 @@
-Red
+[[Independent_red|Red]]

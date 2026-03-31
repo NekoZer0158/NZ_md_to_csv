@@ -1,1 +1,1 @@
-Yep, that also works
+Yep, [[Start|that]] also works
